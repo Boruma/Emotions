@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".Roadmap">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!---->
+              <androidx.drawerlayout.widget.DrawerLayout
+                  android:id="@+id/drawer_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:fitsSystemWindows="true"
+                  tools:openDrawer="start">
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:visibility="visible">
+
+
+                      <com.google.android.material.appbar.MaterialToolbar
+                          android:id="@+id/my_toolbar"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@color/colorMenu"
+                          android:elevation="4dp"
+                          app:navigationIcon="@drawable/ic_baseline_menu_24"
+                          app:itemIconTint="@android:color/tertiary_text_light"
+                          app:itemTextColor="@android:color/tertiary_text_light">
+
+                          <TextView
+                              android:id="@+id/toolbar_title"
+                              style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center"
+                              android:text="Fortschritt"
+                              android:textColor="@android:color/white" />
+
+                      </com.google.android.material.appbar.MaterialToolbar>
+
+
+                      <ScrollView
+                          android:id="@+id/ScrollView"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent">
+
+                          <LinearLayout
+                              android:id="@+id/Layout"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="70dp"
+                              android:layout_marginLeft="16dp"
+                              android:layout_marginStart="16dp"
+                              android:layout_marginRight="16dp"
+                              android:layout_marginEnd="16dp"
+                              android:orientation="vertical"
+                              android:background="@drawable/roadmap">
+
+                          </LinearLayout>
+                      </ScrollView>
+                  </RelativeLayout>
+
+
+                  <com.google.android.material.navigation.NavigationView
+                      android:id="@+id/left_drawer"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_gravity="start"
+                      android:fitsSystemWindows="true"
+                      android:visibility="invisible"
+                      app:headerLayout="@layout/nav_header_main"
+                      app:menu="@menu/activity_main_drawer" />
+
+              <!--     -->
+          </androidx.drawerlayout.widget.DrawerLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:itemBackground="@color/colorMenu"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

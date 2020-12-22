@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".LandingScreen">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMenu"
+        android:elevation="4dp"
+        app:itemIconTint="@android:color/tertiary_text_light"
+        app:itemTextColor="@android:color/tertiary_text_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Profilinfo hinzufügen"
+            android:textColor="@android:color/white" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputcountry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="35dp"
+        android:hint="Land"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/filled_exposed_dropdown_countries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldAge"
+        android:layout_width="195dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="135dp"
+        android:hint="Alter"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textFieldAgeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="35dp"
+        android:hint="Geschlecht"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldAge">
+
+        <AutoCompleteTextView
+            android:id="@+id/filled_exposed_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="35dp"
+        android:hint="Bildung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputcountry">
+
+        <AutoCompleteTextView
+            android:id="@+id/filled_exposed_dropdown_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_landingcontinue"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Fertig"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancelQuestions" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_landingcancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:textColor="@android:color/black"
+        app:strokeColor="@color/colorAccent"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Abbrechen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

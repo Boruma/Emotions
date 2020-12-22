@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_leaderboard"
+        android:enabled="true"
+        android:icon="@drawable/ic_list_alt_black_18dp"
+        android:title="Leaderboard"/>
+    <item
+        android:id="@+id/action_map"
+        android:enabled="true"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="Karte"/>
+    <item
+        android:id="@+id/action_scanner"
+        android:enabled="true"
+        android:icon="@drawable/ic_qr_code_scanner_black_18dp"
+        android:title="QR-Scanner"/>
+
+</menu>

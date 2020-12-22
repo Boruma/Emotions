@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    android:theme="@style/Theme.MaterialComponents.Light"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/common_google_signin_btn_text_light_default"
+    app:cardElevation="2dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/card_title"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Title goes here"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_subtitle"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Subtitle goes here"
+            app:layout_constraintStart_toStartOf="@+id/card_title"
+            app:layout_constraintTop_toBottomOf="@+id/card_title" />
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_1"
+            android:layout_width="344dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:stepSize="1.0"
+            android:valueFrom="-3.0"
+            android:valueTo="3.0"
+            android:value="0.0"
+            app:labelBehavior="floating"
+            android:backgroundTint="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/card_subtitle"
+            app:layout_constraintTop_toBottomOf="@+id/card_subtitle" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="---"
+            app:layout_constraintStart_toStartOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="8dp"
+            android:text="--"
+            app:layout_constraintStart_toStartOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="112dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            app:layout_constraintStart_toStartOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="+++"
+            app:layout_constraintEnd_toEndOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:layout_marginTop="8dp"
+            android:text="++"
+            app:layout_constraintEnd_toEndOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:layout_marginRight="116dp"
+            android:layout_marginTop="8dp"
+            android:text="+"
+            app:layout_constraintEnd_toEndOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="168dp"
+            android:layout_marginRight="168dp"
+            android:layout_marginTop="8dp"
+            android:text="O"
+            app:layout_constraintEnd_toEndOf="@+id/slider_1"
+            app:layout_constraintTop_toBottomOf="@+id/slider_1" />
+
+        <EditText
+            android:id="@+id/editTextFreeText"
+            android:layout_width="340dp"
+            android:layout_height="116dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Freitext"
+            android:inputType="text|textMultiLine"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

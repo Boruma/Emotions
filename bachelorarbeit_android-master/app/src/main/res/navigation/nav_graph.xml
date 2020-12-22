@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFlow">
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.Emotions.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_roadmap"
+            app:destination="@id/roadmap" />
+        <action
+            android:id="@+id/action_settings_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_settings_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+        <action
+            android:id="@+id/action_settings_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settings_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_settings_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_settings_to_LoginFlow"
+            app:destination="@id/LoginFlow"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.Emotions.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_mapFragment_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+        <action
+            android:id="@+id/action_mapFragment_to_roadmap"
+            app:destination="@id/roadmap" />
+        <action
+            android:id="@+id/action_mapFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mapFragment_self"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QR_Scanner"
+        android:name="com.example.Emotions.QR_Scanner"
+        android:label="QR_Scanner"
+        app:startDestination="@id/action_QR_Scanner_to_profileFragment">
+        <action
+            android:id="@+id/action_QR_Scanner_to_roadmap"
+            app:destination="@id/roadmap" />
+        <action
+            android:id="@+id/action_QR_Scanner_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_QR_Scanner_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_QR_Scanner_to_questionFragment"
+            app:destination="@id/questionFragment" >
+            <argument
+                android:name="point_id" />
+        </action>
+        <action
+            android:id="@+id/action_QR_Scanner_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_QR_Scanner_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roadmap"
+        android:name="com.example.Emotions.Roadmap"
+        android:label="fragment_roadmap"
+        tools:layout="@layout/fragment_roadmap" >
+        <action
+            android:id="@+id/action_roadmap_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_roadmap_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+        <action
+            android:id="@+id/action_roadmap_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_roadmap_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_roadmap_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_roadmap_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.Emotions.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <argument
+            android:name="point_IDS"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_questionFragment_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+    </fragment>
+    <navigation
+        android:id="@+id/LoginFlow"
+        app:startDestination="@id/loginFragment" >
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.example.Emotions.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_resetPwEmail"
+                app:destination="@id/resetPwEmail" />
+            <action
+                android:id="@+id/action_loginFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_landingScreen"
+                app:destination="@id/landingScreen" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.example.Emotions.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register">
+            <action
+                android:id="@+id/action_registerFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/password_reset"
+            android:name="com.example.Emotions.password_reset"
+            android:label="password_reset" >
+            <argument
+                android:name="token"
+                app:argType="string" />
+            <argument
+                android:name="email"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_password_reset_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:enterAnim="@anim/fragment_close_enter"
+                app:exitAnim="@anim/fragment_close_exit"
+                app:popEnterAnim="@anim/fragment_close_enter"
+                app:popExitAnim="@anim/fragment_close_exit" />
+        </fragment>
+        <fragment
+            android:id="@+id/landingScreen"
+            android:name="com.example.Emotions.LandingScreen"
+            android:label="fragment_landing_screen"
+            tools:layout="@layout/fragment_landing_screen">
+            <action
+                android:id="@+id/action_landingScreen_to_mapFragment"
+                app:destination="@id/mapFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/resetPwEmail"
+            android:name="com.example.Emotions.ResetPwEmail"
+            android:label="fragment_reset_pw_email"
+            tools:layout="@layout/fragment_reset_pw_email">
+            <action
+                android:id="@+id/action_resetPwEmail_to_password_reset2"
+                app:destination="@id/password_reset" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.example.Emotions.LeaderboardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard"
+        app:startDestination="@id/action_leaderboardFragment_to_profileFragment">
+        <action
+            android:id="@+id/action_leaderboardFragment_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_roadmap"
+            app:destination="@id/roadmap" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboardTodayFragment"
+        android:name="com.example.Emotions.LeaderboardTodayFragment"
+        android:label="fragment_leaderboard_today"
+        tools:layout="@layout/fragment_leaderboard_today" />
+    <fragment
+        android:id="@+id/leaderboardWeekFragment"
+        android:name="com.example.Emotions.leaderboardWeekFragment"
+        android:label="fragment_leaderboard_week"
+        tools:layout="@layout/fragment_leaderboard_week" />
+    <fragment
+        android:id="@+id/leaderboardAllTimeFragment"
+        android:name="com.example.Emotions.leaderboardAllTimeFragment"
+        android:label="fragment_leaderboard_all_time"
+        tools:layout="@layout/fragment_leaderboard_all_time" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.Emotions.profileFragment"
+        android:label="profileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_QR_Scanner"
+            app:destination="@id/QR_Scanner" />
+        <action
+            android:id="@+id/action_profileFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_roadmap"
+            app:destination="@id/roadmap" />
+        <action
+            android:id="@+id/action_profileFragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_profileFragment_self"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pointInfoFragment"
+        android:name="com.example.Emotions.pointInfoFragment"
+        android:label="pointInfoFragment" />
+    <fragment
+        android:id="@+id/answerQuestionsFragment"
+        android:name="com.example.Emotions.AnswerQuestionsFragment"
+        android:label="fragment_answer_questions"
+        tools:layout="@layout/fragment_answer_questions" />
+</navigation>

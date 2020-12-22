@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:tag="profile_fragment_tag"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.drawerlayout.widget.DrawerLayout
+                android:id="@+id/drawer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                tools:openDrawer="start">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/my_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorMenu"
+                        android:elevation="4dp"
+                        app:menu="@menu/top_app_bar"
+                        app:navigationIcon="@drawable/ic_baseline_menu_24"
+                        app:itemIconTint="@android:color/tertiary_text_light"
+                        app:itemTextColor="@android:color/tertiary_text_light">
+
+                        <TextView
+                            android:id="@+id/toolbar_title"
+                            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Profil"
+                            android:textColor="@android:color/white" />
+
+                    </com.google.android.material.appbar.MaterialToolbar>
+
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/imageView"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_alignTop="@+id/editName"
+                        android:layout_alignBottom="@+id/editName"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_data_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toEndOf="@+id/textView14"
+                        android:layout_toRightOf="@+id/textView14"
+                        android:layout_alignTop="@+id/textView14"
+                        android:text="TextView"
+                        android:textSize="18sp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editName"
+                        android:layout_width="268dp"
+                        android:layout_height="57dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/first_divider"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="17dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:visibility="invisible" />
+
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editMail"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/editMail"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="16dp"
+                        android:text="E-Mail"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_data_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textView15"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toEndOf="@+id/textView15"
+                        android:layout_toRightOf="@+id/textView15"
+                        android:text="yasaxo2906@delowd.com"
+                        android:textSize="18sp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editMail"
+                        android:layout_width="268dp"
+                        android:layout_height="57dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/second_divider"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="30dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editCountry"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/editCountry"
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Land"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_data_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textView16"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toEndOf="@+id/textView14"
+                        android:layout_toRightOf="@+id/textView14"
+                        android:text="TextView"
+                        android:textSize="18sp" />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editCountry"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="268dp"
+                        android:layout_height="57dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/third_divider"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="30dp"
+                        android:hint="Land"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                        android:visibility="invisible">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/filled_exposed_dropdown_countries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editAge"
+                        android:layout_alignTop="@+id/editAge"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginStart="34dp"
+                        android:text="Alter"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_data_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textView17"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toEndOf="@+id/textView14"
+                        android:layout_toRightOf="@+id/textView14"
+                        android:text="TextView"
+                        android:textSize="18sp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editAge"
+                        android:layout_width="268dp"
+                        android:layout_height="57dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/fourth_divider"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editEducation"
+                        android:layout_alignTop="@+id/editEducation"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Bildung"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_data_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textView18"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toEndOf="@+id/textView14"
+                        android:layout_toRightOf="@+id/textView14"
+                        android:text="TextView"
+                        android:textSize="18sp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editEducation"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="268dp"
+                        android:layout_height="57dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editAge"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:hint="Bildung"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputcountry">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/filled_exposed_dropdown_education"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/first_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/my_toolbar"
+                        android:layout_marginTop="35dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+                    <View
+                        android:id="@+id/second_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignBottom="@+id/editName"
+                        android:layout_below="@+id/editName"
+                        android:layout_marginBottom="-14dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+                    <View
+                        android:id="@+id/third_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@+id/editMail"
+                        android:layout_marginBottom="-15dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+                    <View
+                        android:id="@+id/fourth_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@+id/editCountry"
+                        android:layout_marginBottom="-15dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+                    <View
+                        android:id="@+id/fith_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@+id/editAge"
+                        android:layout_marginBottom="-15dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+                    <View
+                        android:id="@+id/last_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@+id/editEducation"
+                        android:layout_marginBottom="-15dp"
+                        android:background="@color/common_google_signin_btn_text_light_default" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_editFinish"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="@android:color/black"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/last_divider"
+                        android:layout_marginEnd="64dp"
+                        android:layout_marginRight="281dp"
+                        android:layout_marginTop="55dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Fertig"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/btn_cancelQuestions" />
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_editcancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:layout_alignTop="@+id/button_editFinish"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="0dp"
+                        android:textColor="@android:color/black"
+                        app:strokeColor="@color/colorAccent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Abbrechen"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </RelativeLayout>
+
+
+            <!-- -->
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/left_drawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:fitsSystemWindows="true"
+                    android:visibility="invisible"
+                    app:headerLayout="@layout/nav_header_main"
+                    app:menu="@menu/activity_main_drawer" />
+
+                <!-- -->
+            </androidx.drawerlayout.widget.DrawerLayout>
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                app:itemBackground="@color/colorMenu"
+                app:itemIconTint="@android:color/white"
+                app:itemTextColor="@android:color/white"
+                app:menu="@menu/bottom_nav_menu" />
+
+
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

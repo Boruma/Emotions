@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".LeaderboardFragment">
+
+    <!---->
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="start">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorMenu"
+                    android:elevation="4dp"
+                    app:itemIconTint="@android:color/tertiary_text_light"
+                    app:itemTextColor="@android:color/tertiary_text_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:navigationIcon="@drawable/ic_baseline_menu_24">
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Bestenliste"
+                        android:textColor="@android:color/white" />
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+                <androidx.viewpager.widget.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager_leaderboard"
+                    android:layout_marginBottom="65dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout_leaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginTop="65dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+                </com.google.android.material.tabs.TabLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/left_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                android:visibility="invisible"
+                app:headerLayout="@layout/nav_header_main"
+                app:menu="@menu/activity_main_drawer" />
+
+            <!---->
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMenu"
+        app:itemBackground="@color/colorMenu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/surfaceView"
+        app:menu="@menu/bottom_nav_menu_qr" />
+</androidx.constraintlayout.widget.ConstraintLayout>

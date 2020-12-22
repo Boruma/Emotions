@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#55705A</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorAccent">#F5F0E3</color>
+    <color name="colorMenu">#55705A</color>
+    <color name="WayPoints_Roadmap">#BB30E1</color>
+
+    </resources>

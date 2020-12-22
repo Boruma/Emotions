@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_Help"
+        android:title="@string/action_settings"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:showAsAction="never"/>
+</menu>

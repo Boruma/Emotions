@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnswerQuestionsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:layout_marginTop="88dp"
+                android:gravity="center"
+                android:text="Keine Fragen zugeordnet"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="invisible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancelQuestions"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/my_recycler_view"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@android:color/black"
+                app:strokeColor="@color/colorAccent"
+                android:text="Abbrechen" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_questionstest"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/my_recycler_view"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="244dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginStart="244dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@android:color/black"
+                android:text="Fertig"  />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
