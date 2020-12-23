@@ -3,4 +3,10 @@ Open Source Project to collect Emotion Data from participants
 
 1) PHP Laravel Backend and Webclient
 2) Java Android Application
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Share your Emotions (APP)](1.png)
+
+![Leaderboard (APP)](2.png)
+
+![Map with Emotionzones (APP)](4.png)
+
+![Quests (APP)](5.png)
