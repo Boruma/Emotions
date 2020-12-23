@@ -7,6 +7,6 @@ Open Source Project to collect Emotion Data from participants
 
 ![Leaderboard (APP)](2.png)
 
-![Map with Emotionzones (APP)](4.png)
+![Map with Emotionzones (APP)](4.jpg)
 
-![Quests (APP)](5.png)
+![Quests (APP)](5.jpg)
