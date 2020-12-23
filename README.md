@@ -4,8 +4,8 @@ Open Source Project to collect Emotion Data from participants
 1) PHP Laravel Backend and Webclient
 2) Java Android Application
 
+<img src="1.png" width="300" height="600"/>
+<img src="2.png" width="300" height="600"/>
+<img src="4.jpg" width="300" height="600"/>
+<img src="5.jpg" width="300" height="600"/>
 
-![Share your Emotions (APP)](1.png)
-![Leaderboard (APP)](2.png)
-![Map with Emotionzones (APP)](4.jpg)
-![Quests (APP)](5.jpg)
